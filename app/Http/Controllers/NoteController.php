@@ -10,7 +10,7 @@ class NoteController extends Controller
     public function create_check(Request $request)
     {
         $valid = $request->validate([
-            "name_title" => "required|min:1",
+            "name_title" => "required|min:1|max:20",
             "description_note" => "required|min:1"
         ]);
         $review = new Contact();
